@@ -1226,35 +1226,29 @@ textarea { resize: vertical; }
 /* ── Footer ─────────────────────────────────────────────────── */
 .footer__sister {
   border-top: 1px solid rgba(255,255,255,.08);
-  padding: 40px 24px;
+  padding: 20px 24px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 16px;
-  text-align: center;
+  justify-content: center;
+  gap: 20px;
 }
 .footer__sister-label {
-  font-size: .75rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.4);
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
   margin: 0;
 }
 .footer__sister a { display: flex; align-items: center; }
 .footer__sister img {
-  height: 90px;
+  height: 36px;
   width: auto;
-  opacity: .85;
+  opacity: .8;
   transition: opacity .2s;
 }
 .footer__sister a:hover img { opacity: 1; }
 .footer__sister-desc {
-  font-size: .85rem;
-  color: rgba(255,255,255,.5);
-  max-width: 320px;
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
   margin: 0;
-  line-height: 1.6;
 }
 
 .footer__bottom {
