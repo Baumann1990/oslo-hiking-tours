@@ -1233,8 +1233,12 @@ textarea { resize: vertical; }
   gap: 20px;
 }
 .footer__sister-label {
-  font-size: .8rem;
-  color: rgba(255,255,255,.45);
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  white-space: nowrap;
   margin: 0;
 }
 .footer__sister a { display: flex; align-items: center; }
