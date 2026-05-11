@@ -1224,6 +1224,26 @@ textarea { resize: vertical; }
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */
+.footer__sister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: .8rem;
+  color: rgba(255,255,255,.5);
+}
+.footer__sister a { display: flex; align-items: center; }
+.footer__sister img {
+  height: 32px;
+  width: auto;
+  opacity: .75;
+  transition: opacity .2s;
+  filter: brightness(0) invert(1);
+}
+.footer__sister a:hover img { opacity: 1; }
+
 .footer__bottom {
   border-top: 1px solid rgba(255,255,255,.08);
   padding: 20px 24px;
