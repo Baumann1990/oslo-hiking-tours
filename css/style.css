@@ -1236,11 +1236,13 @@ textarea { resize: vertical; }
 }
 .footer__sister a { display: flex; align-items: center; }
 .footer__sister img {
-  height: 32px;
-  width: auto;
-  opacity: .75;
+  width: 180px;
+  height: 78px;
+  object-fit: cover;
+  object-position: 50% 22%;
+  opacity: .8;
   transition: opacity .2s;
-  filter: brightness(0) invert(1);
+  border-radius: 4px;
 }
 .footer__sister a:hover img { opacity: 1; }
 
