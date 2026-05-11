@@ -174,27 +174,27 @@ ul { list-style: none; }
 
 .nav__logo {
   display: block;
-  width: 180px;
-  height: 90px;
-  background: url('../images/logo2.png') no-repeat center top;
-  background-size: 188px 188px;
+  width: 160px;
+  height: 56px;
+  background: url('../images/logo_assets/09_small_white_512w_transparent.png') no-repeat left center;
+  background-size: 160px 56px;
   overflow: hidden;
   transition: filter .3s;
 }
 
+/* On light/scrolled nav, invert white logo to dark so it stays visible */
 .nav.scrolled .nav__logo {
   filter: brightness(0);
 }
 
 .footer__logo {
   display: block;
-  width: 360px;
-  height: 180px;
-  background: url('../images/logo2.png') no-repeat center top;
-  background-size: 376px 376px;
+  width: 220px;
+  height: 76px;
+  background: url('../images/logo_assets/09_small_white_512w_transparent.png') no-repeat left center;
+  background-size: 220px 76px;
   overflow: hidden;
   margin-bottom: 16px;
-  filter: brightness(1.2);
 }
 
 .nav__menu {
@@ -1302,9 +1302,9 @@ textarea { resize: vertical; }
   .footer__inner { grid-template-columns: 1fr; gap: 24px; }
 
   .footer__logo {
-    width: 220px;
-    height: 110px;
-    background-size: 230px 230px;
+    width: 180px;
+    height: 63px;
+    background-size: 180px 63px;
   }
 
   .tour-hero { height: 45vh; min-height: 280px; }
@@ -1344,9 +1344,9 @@ textarea { resize: vertical; }
   .tour-page__price { font-size: 1.6rem; }
 
   .footer__logo {
-    width: 180px;
-    height: 90px;
-    background-size: 188px 188px;
+    width: 150px;
+    height: 52px;
+    background-size: 150px 52px;
   }
 
   .faq__question { font-size: .95rem; }
