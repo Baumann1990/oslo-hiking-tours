@@ -1236,10 +1236,8 @@ textarea { resize: vertical; }
 }
 .footer__sister a { display: flex; align-items: center; }
 .footer__sister img {
-  width: 180px;
-  height: 78px;
-  object-fit: cover;
-  object-position: 50% 22%;
+  height: 80px;
+  width: auto;
   opacity: .8;
   transition: opacity .2s;
   border-radius: 4px;
