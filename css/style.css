@@ -215,6 +215,15 @@ ul { list-style: none; }
 .nav__menu a:hover { color: var(--amber); }
 .nav.scrolled .nav__menu a:hover { color: var(--green-mid); }
 
+/* ── Inline SVG icons (replacing emojis) ──────────────────────── */
+svg.icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+  flex-shrink: 0;
+}
+
 .nav__social {
   display: flex;
   align-items: center;
