@@ -603,7 +603,7 @@ svg.icon {
 
 .tour-card__footer {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding-top: 16px;
   border-top: 1px solid var(--border);
@@ -620,6 +620,20 @@ svg.icon {
   font-size: .78rem;
   font-weight: 400;
   color: var(--text-muted);
+}
+
+.tour-card__group-note {
+  display: block;
+  font-size: .72rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.tour-card__group-note a {
+  color: var(--green-mid);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ── Guides ──────────────────────────────────────────────────── */

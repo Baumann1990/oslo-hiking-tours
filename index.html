@@ -243,7 +243,7 @@
           <ul class="about__list">
             <li>We drive you to Norway's greatest mountains — Galdhøpiggen, Gaustatoppen, Besseggen and more</li>
             <li>Hotel pickup included — we handle all the driving, you focus on the mountains</li>
-            <li>Private groups of up to 4 — fully guided, fully personal, no strangers</li>
+            <li>Private groups — fully guided, fully personal, no strangers</li>
             <li>Early starts, spectacular summits, back in Oslo the same evening</li>
           </ul>
           <div class="stats">
@@ -252,8 +252,8 @@
               <span class="stat__label">Routes</span>
             </div>
             <div class="stat">
-              <span class="stat__num">Max 4</span>
-              <span class="stat__label">Per trip</span>
+              <span class="stat__num">Private</span>
+              <span class="stat__label">Groups</span>
             </div>
             <div class="stat">
               <span class="stat__num">Return</span>
@@ -314,7 +314,7 @@
               sweeping views over Oslo and the fjord.
             </p>
             <div class="tour-card__footer">
-              <span class="tour-card__price">NOK 5 000 <em>/ group</em></span>
+              <span class="tour-card__price">NOK 5 000 <em>/ group up to 4</em><span class="tour-card__group-note">Larger group? <a href="#book">Get a quote</a></span></span>
               <div class="tour-card__actions">
                 <button class="btn btn--outline btn--sm" data-modal="modal-vettakollen">Details</button>
                 <a href="#book" class="btn btn--sm">Book</a>
@@ -350,7 +350,7 @@
               there from Oslo and back — same day.
             </p>
             <div class="tour-card__footer">
-              <span class="tour-card__price">NOK 10 000 <em>/ group</em></span>
+              <span class="tour-card__price">NOK 10 000 <em>/ group up to 4</em><span class="tour-card__group-note">Larger group? <a href="#book">Get a quote</a></span></span>
               <div class="tour-card__actions">
                 <button class="btn btn--outline btn--sm" data-modal="modal-gaustatoppen">Details</button>
                 <a href="#book" class="btn btn--sm">Book</a>
@@ -386,7 +386,7 @@
               Jotunheimen National Park.
             </p>
             <div class="tour-card__footer">
-              <span class="tour-card__price">NOK 10 000 <em>/ group</em></span>
+              <span class="tour-card__price">NOK 10 000 <em>/ group up to 4</em><span class="tour-card__group-note">Larger group? <a href="#book">Get a quote</a></span></span>
               <div class="tour-card__actions">
                 <button class="btn btn--outline btn--sm" data-modal="modal-besseggen">Details</button>
                 <a href="#book" class="btn btn--sm">Book</a>
@@ -422,7 +422,7 @@
               the same night.
             </p>
             <div class="tour-card__footer">
-              <span class="tour-card__price">NOK 15 000 <em>/ group</em></span>
+              <span class="tour-card__price">NOK 15 000 <em>/ group up to 4</em><span class="tour-card__group-note">Larger group? <a href="#book">Get a quote</a></span></span>
               <div class="tour-card__actions">
                 <button class="btn btn--outline btn--sm" data-modal="modal-galdhopiggen">Details</button>
                 <a href="#book" class="btn btn--sm">Book</a>
@@ -483,10 +483,10 @@
                 <label for="tour">Tour</label>
                 <select id="tour" name="tour" required>
                   <option value="">Select a trip…</option>
-                  <option>Vettakollen Viewpoint — NOK 5 000 / group</option>
-                  <option>Gaustatoppen — NOK 10 000 / group</option>
-                  <option>Besseggen Ridge — NOK 10 000 / group</option>
-                  <option>Galdhøpiggen Summit — NOK 15 000 / group</option>
+                  <option>Vettakollen Viewpoint — from NOK 5 000</option>
+                  <option>Gaustatoppen — from NOK 10 000</option>
+                  <option>Besseggen Ridge — from NOK 10 000</option>
+                  <option>Galdhøpiggen Summit — from NOK 15 000</option>
                 </select>
                 <span class="field-error" id="error-tour"></span>
               </div>
@@ -499,7 +499,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="hikers">Number of Guests</label>
-                <input type="number" id="hikers" name="hikers" min="1" max="4" placeholder="1–4" required />
+                <input type="number" id="hikers" name="hikers" min="1" placeholder="e.g. 2" required />
                 <span class="field-error" id="error-hikers"></span>
               </div>
               <div class="form-group">
@@ -552,7 +552,7 @@
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> 3.5 hrs hiking</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1)"><path d="M3 17Q1 17 1 15Q1 11 3 10L5 10Q7 9 9 5Q12 3 16 3Q21 3 22 9Q23 14 22 16Q22 17 20 17Z"/><circle cx="5.5" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg></span> 30 min from Oslo</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span> Hotel pickup included</div>
-          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Max 4 guests</div>
+          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Up to 4 guests</div>
         </div>
         <h2 id="modal-vettakollen-title">Vettakollen Viewpoint</h2>
         <p>Vettakollen is one of Oslo's great surprises — a rocky summit just 30 minutes from the city centre that delivers views most visitors never realise exist. We drive you to the trailhead, the forest begins immediately, and the path winds steadily upward through birch and pine to the open rocky plateau at the top.</p>
@@ -605,7 +605,7 @@
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> 4-5 hrs hiking</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1)"><path d="M3 17Q1 17 1 15Q1 11 3 10L5 10Q7 9 9 5Q12 3 16 3Q21 3 22 9Q23 14 22 16Q22 17 20 17Z"/><circle cx="5.5" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg></span> 2.5 hrs from Oslo</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span> Hotel pickup included</div>
-          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Max 4 guests</div>
+          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Up to 4 guests</div>
         </div>
         <h2 id="modal-gaustatoppen-title">Gaustatoppen</h2>
         <p>At 1,883 metres, Gaustatoppen is Norway's most spectacular viewpoint. On a clear day from the summit you can see one sixth of the entire country — a panorama that stretches from the coast to the high mountains in every direction. We drive you there from Oslo and back in a single day.</p>
@@ -659,7 +659,7 @@
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> 6-8 hrs hiking</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1)"><path d="M3 17Q1 17 1 15Q1 11 3 10L5 10Q7 9 9 5Q12 3 16 3Q21 3 22 9Q23 14 22 16Q22 17 20 17Z"/><circle cx="5.5" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg></span> 3.5 hrs from Oslo</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span> Hotel pickup included</div>
-          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Max 4 guests</div>
+          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Up to 4 guests</div>
         </div>
         <h2 id="modal-besseggen-title">Besseggen Ridge</h2>
         <p>Besseggen is the most famous mountain hike in Norway — a narrow ridge between Lake Gjende (bright glacial green, 984m) and Lake Bessvatn (deep blue, 1,373m), with 389 metres of open water between them. The visual contrast is one of the most extraordinary sights in all of Scandinavia.</p>
@@ -713,7 +713,7 @@
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> 5-7 hrs hiking</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1)"><path d="M3 17Q1 17 1 15Q1 11 3 10L5 10Q7 9 9 5Q12 3 16 3Q21 3 22 9Q23 14 22 16Q22 17 20 17Z"/><circle cx="5.5" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg></span> 5 hrs from Oslo</div>
           <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></span> Pickup at 05:00</div>
-          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Max 4 guests</div>
+          <div class="modal__stat"><span><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.74"/></svg></span> Up to 4 guests</div>
         </div>
         <h2 id="modal-galdhopiggen-title">Galdhøpiggen Summit</h2>
         <p>Galdhøpiggen stands at 2,469 metres — the highest point in Norway, in Scandinavia and in all of Northern Europe. This is the flagship trip: a full day out of Oslo to the roof of the continent and back, with your private guide leading you all the way to the top.</p>
@@ -758,32 +758,32 @@
 
         <details class="faq__item">
           <summary class="faq__question">What day trips does Oslo Hiking Tours offer?</summary>
-          <p class="faq__answer">We offer four private guided day trips from Oslo: Vettakollen Viewpoint (local, easy — 30 min drive), Gaustatoppen (medium — 2.5 hrs drive to Telemark), Besseggen Ridge (challenging — 3.5 hrs drive into Jotunheimen), and Galdhøpiggen Summit (challenging — 5 hrs drive to Norway's highest peak). All trips include hotel pickup and all driving.</p>
+          <p class="faq__answer">We offer four private guided day trips from Oslo: Vettakollen Viewpoint (easy, 30 min drive — NOK 5,000), Gaustatoppen (moderate, 2.5 hrs to Telemark — NOK 10,000), Besseggen Ridge (challenging, 3.5 hrs to Jotunheimen — NOK 10,000), and Galdhøpiggen Summit (challenging, 5 hrs to Norway's highest peak — NOK 15,000). All prices are per group of up to 4 guests, with hotel pickup and all driving included.</p>
         </details>
 
         <details class="faq__item">
-          <summary class="faq__question">Is hotel pickup and driving included?</summary>
-          <p class="faq__answer">Yes. Your guide picks you up at your Oslo hotel and drives you to the trailhead — and back again. You don't need to hire a car, navigate Norwegian mountain roads or find parking. We handle everything.</p>
+          <summary class="faq__question">Do I need to organise anything myself?</summary>
+          <p class="faq__answer">No — the whole day is handled for you. We pick you up from your hotel in Oslo, drive you to the trailhead, guide you through the entire route, and drive you home. There's nothing to plan, no car to hire, no Norwegian mountain roads to navigate. You just show up — we take care of everything else.</p>
         </details>
 
         <details class="faq__item">
-          <summary class="faq__question">How many people can join a trip?</summary>
-          <p class="faq__answer">Each trip is private, with a maximum of 4 guests. The car is exclusively yours — no shared groups, no strangers. Pricing is per trip, not per person, so the experience scales well for couples, families and small groups of friends.</p>
+          <summary class="faq__question">Are the trips private — or will I be grouped with strangers?</summary>
+          <p class="faq__answer">Fully private. Every trip is exclusively for your group — no shared vans, no group tours, no strangers. The guide, the car and the day are entirely yours. Our standard trips are priced per group of up to 4. Larger groups are welcome — contact us and we'll put together a tailored quote.</p>
         </details>
 
         <details class="faq__item">
-          <summary class="faq__question">What equipment do I need to bring?</summary>
-          <p class="faq__answer">Hiking boots and a waterproof layer are recommended for all trips. For Galdhøpiggen, warm layers and sturdy boots with ankle support are especially important given the altitude. We send a full kit list when you confirm your booking.</p>
+          <summary class="faq__question">Which tour do you recommend for a first-time visitor?</summary>
+          <p class="faq__answer">It depends on what you're after. For a taste of Norwegian outdoor life close to the city, Vettakollen is a beautiful half-day forest hike just 30 minutes from Oslo. For a dramatic summit with an unforgettable view, Gaustatoppen is the natural choice — a moderate day trip to one of the greatest panoramas in all of Norway. For those with more experience, Besseggen Ridge is Norway's most famous hike, and Galdhøpiggen is the highest point in all of Scandinavia.</p>
         </details>
 
         <details class="faq__item">
-          <summary class="faq__question">What is included in the price?</summary>
-          <p class="faq__answer">All trips include a private guide, hotel pickup, all driving to and from the trailhead, and full route planning. You just need to show up, pack your bag and enjoy the mountains.</p>
+          <summary class="faq__question">How fit do I need to be?</summary>
+          <p class="faq__answer">It depends on the tour. Vettakollen is a 3.5-hour forest hike suitable for most walkers. Gaustatoppen involves a sustained 980m climb and needs solid walking fitness, but no mountain experience. Besseggen and Galdhøpiggen are full mountain days — challenging terrain, long hours, and some prior hiking experience is recommended. If you're unsure which tour suits your group, just get in touch and we'll help you choose.</p>
         </details>
 
         <details class="faq__item">
-          <summary class="faq__question">How far in advance should I book?</summary>
-          <p class="faq__answer">We recommend booking at least 48 hours in advance. We'll confirm within 24 hours of your enquiry and share your pickup time, kit list and everything you need before the trip.</p>
+          <summary class="faq__question">Can I do these hikes without a car?</summary>
+          <p class="faq__answer">Yes — that's exactly what we're here for. Reaching places like Besseggen or Galdhøpiggen from Oslo without a car involves complicated combinations of trains, buses and ferries. With Oslo Hiking Tours, your guide picks you up from your hotel door and handles all the driving. No car hire, no navigation, no logistics.</p>
         </details>
 
       </div>
@@ -800,7 +800,7 @@
         <p>Private guided day trips from Oslo to Norway's greatest mountains.</p>
         <ul class="footer__trust">
           <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Based in Oslo, Norway</li>
-          <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Private groups — max 4 guests</li>
+          <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg> Private groups — your group only</li>
           <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="transform:scaleX(-1)"><path d="M3 17Q1 17 1 15Q1 11 3 10L5 10Q7 9 9 5Q12 3 16 3Q21 3 22 9Q23 14 22 16Q22 17 20 17Z"/><circle cx="5.5" cy="17" r="3"/><circle cx="17" cy="17" r="3"/></svg> Hotel pickup included</li>
           <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg> post@oslohikingtours.no</li>
         </ul>
