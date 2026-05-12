@@ -6,12 +6,12 @@ Oslo Hiking Tours is a private guided hiking company based in Oslo, Norway. We o
 
 ## Our Tours
 
-### Vettakollen Summit
+### Vettakollen Viewpoint
 - Difficulty: Easy
 - Duration: 3.5 hours hiking
 - Drive from Oslo: 30 minutes
 - Price: NOK 5,000 per group (up to 4 guests)
-- Description: A guided hike to the Vettakollen summit in Nordmarka, with sweeping panoramic views over Oslo and the Oslofjord. Ideal for families and first-time visitors.
+- Description: A guided hike to the Vettakollen viewpoint in Nordmarka, with sweeping panoramic views over Oslo and the Oslofjord. Ideal for families and first-time visitors.
 - URL: https://www.oslohikingtours.no/vettakollen-summit
 
 ### Gaustatoppen
