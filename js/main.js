@@ -1,3 +1,44 @@
+/* ── Cookie consent ──────────────────────────────────────────── */
+(function initCookieConsent() {
+  const KEY    = 'cookieConsent';
+  const stored = localStorage.getItem(KEY);
+
+  // Apply stored decision to GA consent mode immediately
+  if (typeof gtag === 'function') {
+    gtag('consent', 'update', {
+      analytics_storage: stored === 'accepted' ? 'granted' : 'denied'
+    });
+  }
+
+  // Already decided — no banner needed
+  if (stored) return;
+
+  // Build and inject banner
+  const banner = document.createElement('div');
+  banner.id = 'cookieBanner';
+  banner.setAttribute('role', 'region');
+  banner.setAttribute('aria-label', 'Cookie consent');
+  banner.innerHTML =
+    '<p class="cookie__text">We use cookies to understand how visitors find and use our tours (Google Analytics). No data is shared for advertising.</p>' +
+    '<div class="cookie__actions">' +
+      '<button class="cookie__btn cookie__btn--decline" id="cookieDecline">Decline</button>' +
+      '<button class="cookie__btn cookie__btn--accept"  id="cookieAccept">Accept</button>' +
+    '</div>';
+  document.body.appendChild(banner);
+
+  const dismiss = choice => {
+    localStorage.setItem(KEY, choice);
+    if (choice === 'accepted' && typeof gtag === 'function') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+    }
+    banner.classList.add('cookie--hidden');
+    setTimeout(() => banner.remove(), 300);
+  };
+
+  document.getElementById('cookieAccept').addEventListener('click', () => dismiss('accepted'));
+  document.getElementById('cookieDecline').addEventListener('click', () => dismiss('declined'));
+})();
+
 /* ── Gallery rotation ────────────────────────────────────────── */
 const GALLERY_POOL = [
   { src: 'images/att.Yg0QvOmsp10QDN7bjrbHeC-1lQg-VXKRgvqlLLWEh_U.jpg', alt: 'Rolling green mountain plateau' },
