@@ -41,7 +41,7 @@
 
 /* ── Gallery rotation ────────────────────────────────────────── */
 const GALLERY_POOL = [
-  { src: 'images/att.Yg0QvOmsp10QDN7bjrbHeC-1lQg-VXKRgvqlLLWEh_U.jpg', alt: 'Rolling green mountain plateau' },
+  { src: 'images/vettakollen-2.jpg',                                      alt: 'Forest and Oslo fjord from Vettakollen' },
   { src: 'images/att.qFJQAG6d-IAeeQ26VpCRwtgixvl1ShcwNAMO85fkQ4s.jpg',  alt: 'Epic snowy ridge panorama' },
   { src: 'images/att.RyVcVYwgc_XTEa6oTFyh6-cKfHcn5_yVhnqI4nYXCAo.jpg', alt: 'Oslo riverside path at sunset' },
   { src: 'images/att.VkJlLNhZz7SufAdCjAcgNlpmS1eiBuOwBusHCYg0z-c.jpg',  alt: 'Hidden corner of Oslo' },
@@ -49,10 +49,11 @@ const GALLERY_POOL = [
   { src: 'images/att.Di9GCEUXRVOlNGZ3F0LnlzCeOEzdXcGvvZOSs1tjvIk.jpg', alt: 'Kolsåstoppen ridge views' },
   { src: 'images/att.vlftsNroPZAbrtWtv9k8rWkvi4I-2ELhIYu0uqt5ALg.jpg',  alt: 'Rocky trail with fjord in the distance' },
   { src: 'images/att.N7lGxR01jlJa7HC9O3aMouOVh0UFvJMW9poCr6faO80.jpg',  alt: 'Nordmarka forest lake' },
-  { src: 'images/att.J-mS70UvV2wpD7MrPGu4GOFAKNT9xkCecwAb01vLtdw.jpg',  alt: 'Rocky summit panorama' },
+  { src: 'images/vettakollen-3.jpg',                                      alt: 'Hikers at Vettakollen summit' },
+  { src: 'images/vettakollen-4.jpg',                                      alt: 'Holmenkollen view from Vettakollen' },
 ];
 
-const GALLERY_COUNT = 7;
+const GALLERY_COUNT = 8;
 
 (function buildGallery() {
   const track = document.getElementById('galleryTrack');
