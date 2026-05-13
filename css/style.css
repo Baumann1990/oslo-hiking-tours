@@ -793,9 +793,12 @@ svg.icon {
 .book__includes li {
   font-size: .9rem;
   color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 8px;
+}
+
+.book__includes a {
+  color: var(--green-mid);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 /* ── Form ────────────────────────────────────────────────────── */
