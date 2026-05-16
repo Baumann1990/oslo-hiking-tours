@@ -182,9 +182,9 @@ ul { list-style: none; }
   transition: filter .3s;
 }
 
-/* On light/scrolled nav, invert white logo to dark so it stays visible */
+/* On light/scrolled nav, switch to black logo */
 .nav.scrolled .nav__logo {
-  filter: brightness(0);
+  background-image: url('../images/logo_assets/08_small_black_512w_transparent.png');
 }
 
 .footer__logo {
