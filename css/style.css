@@ -1815,10 +1815,11 @@ textarea { resize: vertical; }
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    padding: 12px 20px;
+    padding-bottom: max(12px, calc(12px + env(safe-area-inset-bottom)));
     background: var(--white);
     box-shadow: 0 -4px 20px rgba(0,0,0,.12);
-    z-index: 100;
+    z-index: 150;
   }
   .tour-sticky-cta .btn {
     width: 100%;
@@ -1869,4 +1870,169 @@ textarea { resize: vertical; }
 @media (max-width: 480px) {
   .hero__img { object-position: center 60%; }
   .tour-hero__img { object-position: center 40%; }
+}
+
+/* ── Hub / Guide pages ───────────────────────────────────────── */
+.page-hero {
+  background: var(--green-deep);
+  padding: calc(var(--nav-h) + 56px) 0 64px;
+}
+.page-hero__tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+  background: rgba(255,255,255,.12);
+  padding: 5px 12px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.page-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+.page-hero__sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,.72);
+  line-height: 1.75;
+  max-width: 580px;
+}
+.page-hero__breadcrumb {
+  margin-top: 32px;
+  font-size: .8rem;
+  color: rgba(255,255,255,.45);
+}
+.page-hero__breadcrumb a { color: rgba(255,255,255,.6); text-decoration: underline; }
+
+/* ── Hub tour entries ────────────────────────────────────────── */
+.hub-tours { padding: 72px 0 48px; }
+
+.hub-tour {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 48px;
+  align-items: start;
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+.hub-tour:first-child { padding-top: 0; }
+.hub-tour:last-child { border-bottom: none; }
+
+.hub-tour__img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.hub-tour__tag { margin-bottom: 12px; }
+.hub-tour__title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+.hub-tour__meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.hub-tour__stat { font-size: .85rem; color: var(--text-muted); }
+.hub-tour__desc {
+  color: var(--text);
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+.hub-tour__price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 18px;
+}
+.hub-tour__price em {
+  font-style: normal;
+  font-size: .85rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* ── Callout box ─────────────────────────────────────────────── */
+.callout {
+  background: rgba(45,106,79,.07);
+  border-left: 4px solid var(--green-mid);
+  padding: 24px 28px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin: 16px 0 56px;
+}
+.callout__title {
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+}
+.callout p { color: var(--text-muted); line-height: 1.7; margin: 0; }
+
+/* ── Guide article ───────────────────────────────────────────── */
+.guide-intro {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.guide-mountain {
+  padding: 56px 0;
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.guide-mountain:last-child { border-bottom: none; }
+
+.guide-mountain__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.guide-mountain__title {
+  font-family: var(--font-serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+.guide-mountain__facts {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.guide-mountain__fact { font-size: .82rem; color: var(--text-muted); }
+.guide-mountain__body { color: var(--text); line-height: 1.75; }
+.guide-mountain__body p { margin-bottom: 12px; }
+.guide-mountain__body p:last-child { margin-bottom: 0; }
+.guide-mountain__best {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--green-mid);
+}
+
+@media (max-width: 768px) {
+  .hub-tour { grid-template-columns: 1fr; gap: 20px; }
+  .hub-tour__img { height: 220px; }
+  .guide-mountain { grid-template-columns: 1fr; gap: 20px; }
+  .guide-mountain__img { height: 200px; }
+  .page-hero { padding: calc(var(--nav-h) + 32px) 0 48px; }
 }
