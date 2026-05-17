@@ -472,6 +472,7 @@ svg.icon {
 
 .filter {
   padding: 8px 20px;
+  min-height: 44px;
   border-radius: 100px;
   border: 1.5px solid var(--border);
   background: var(--white);
@@ -1320,7 +1321,7 @@ textarea { resize: vertical; }
   .nav__logo {
     width: 110px;
     height: 52px;
-    background-size: 110px 110px;
+    background-size: contain;
   }
 
   .nav__menu {
@@ -1798,4 +1799,74 @@ textarea { resize: vertical; }
 
 @media (max-width: 700px) {
   .related__grid { grid-template-columns: 1fr; }
+}
+
+/* ── Mobile improvements ─────────────────────────────────────── */
+
+/* Sticky book CTA on tour pages */
+.tour-sticky-cta {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .tour-sticky-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px calc(12px + env(safe-area-inset-bottom));
+    background: var(--white);
+    box-shadow: 0 -4px 20px rgba(0,0,0,.12);
+    z-index: 100;
+  }
+  .tour-sticky-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .tour-page {
+    padding-bottom: 80px;
+  }
+}
+
+/* Related tours — horizontal scroll on mobile */
+@media (max-width: 700px) {
+  .related__grid {
+    grid-template-columns: repeat(3, 76vw);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 8px;
+  }
+  .related__grid::-webkit-scrollbar { display: none; }
+  .related__card { scroll-snap-align: start; }
+}
+
+/* Modal as full-screen bottom sheet on mobile */
+@keyframes modalUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .modal {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .modal__panel {
+    border-radius: var(--radius) var(--radius) 0 0;
+    max-height: 92dvh;
+    overflow-y: auto;
+    animation: modalUp .35s ease both;
+    margin: 0;
+    width: 100%;
+  }
+  .modal__hero { height: 220px; }
+}
+
+/* Hero image crop on small phones */
+@media (max-width: 480px) {
+  .hero__img { object-position: center 60%; }
+  .tour-hero__img { object-position: center 40%; }
 }
