@@ -1828,6 +1828,10 @@ textarea { resize: vertical; }
   .tour-page {
     padding-bottom: 80px;
   }
+  /* Give homepage footer breathing room when sticky CTA is visible */
+  body.home-sticky-active .footer {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
 }
 
 /* Related tours — horizontal scroll on mobile */

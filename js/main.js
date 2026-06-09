@@ -1,3 +1,22 @@
+/* ── Homepage sticky book CTA ────────────────────────────────── */
+(function initHomeStickyBook() {
+  const cta  = document.getElementById('homeStickyBook');
+  const hero = document.querySelector('.hero');
+  if (!cta || !hero) return;
+
+  function update() {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const visible    = heroBottom <= 0;
+    // Show once the hero has fully scrolled off screen
+    cta.style.display = visible ? '' : 'none';
+    document.body.classList.toggle('home-sticky-active', visible);
+  }
+
+  // Run on scroll and on load; passive for performance
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
 /* ── Cookie consent ──────────────────────────────────────────── */
 (function initCookieConsent() {
   const KEY    = 'cookieConsent';
