@@ -221,14 +221,14 @@ const confirmPanel = document.getElementById('formConfirm');
 
 if (form) {
   const setFieldError = (id, message) => {
-    const field = document.getElementById(id);
+    const field = id === 'tour' ? document.getElementById('tourOptions') : document.getElementById(id);
     const span  = document.getElementById('error-' + id);
     if (field) field.classList.add('input--error');
     if (span)  span.textContent = message;
   };
 
   const clearFieldError = (id) => {
-    const field = document.getElementById(id);
+    const field = id === 'tour' ? document.getElementById('tourOptions') : document.getElementById(id);
     const span  = document.getElementById('error-' + id);
     if (field) field.classList.remove('input--error');
     if (span)  span.textContent = '';
@@ -253,8 +253,8 @@ if (form) {
       valid = false;
     }
 
-    const tour = form.querySelector('#tour');
-    if (!tour.value) {
+    const tourChecked = form.querySelector('input[name="tour"]:checked');
+    if (!tourChecked) {
       setFieldError('tour', 'Please select a tour.');
       valid = false;
     }
@@ -274,9 +274,13 @@ if (form) {
     return valid;
   };
 
-  ['name', 'email', 'tour', 'date', 'hikers'].forEach(id => {
+  ['name', 'email', 'date', 'hikers'].forEach(id => {
     const field = document.getElementById(id);
     if (field) field.addEventListener('input', () => clearFieldError(id));
+  });
+
+  form.querySelectorAll('input[name="tour"]').forEach(radio => {
+    radio.addEventListener('change', () => clearFieldError('tour'));
   });
 
   form.addEventListener('submit', async e => {
