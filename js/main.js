@@ -236,7 +236,7 @@ if (form) {
 
   const validateForm = () => {
     let valid = true;
-    ['name', 'email', 'tour', 'date', 'hikers'].forEach(id => clearFieldError(id));
+    ['name', 'email', 'tour', 'date'].forEach(id => clearFieldError(id));
 
     const name = form.querySelector('#name');
     if (!name.value.trim()) {
@@ -265,16 +265,10 @@ if (form) {
       valid = false;
     }
 
-    const hikers = form.querySelector('#hikers');
-    if (!hikers.value) {
-      setFieldError('hikers', 'Please enter the number of hikers.');
-      valid = false;
-    }
-
     return valid;
   };
 
-  ['name', 'email', 'date', 'hikers'].forEach(id => {
+  ['name', 'email', 'date'].forEach(id => {
     const field = document.getElementById(id);
     if (field) field.addEventListener('input', () => clearFieldError(id));
   });
@@ -282,6 +276,23 @@ if (form) {
   form.querySelectorAll('input[name="tour"]').forEach(radio => {
     radio.addEventListener('change', () => clearFieldError('tour'));
   });
+
+  // Guests stepper (+/- around a hidden input, min 1, max 12)
+  const guestsStepper = document.getElementById('guestsStepper');
+  if (guestsStepper) {
+    const valueEl  = document.getElementById('guestsValue');
+    const hidden   = document.getElementById('hikers');
+    const GUEST_MIN = 1, GUEST_MAX = 12;
+    guestsStepper.querySelectorAll('.stepper__btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const step = parseInt(btn.dataset.step, 10);
+        let next = parseInt(hidden.value, 10) + step;
+        next = Math.max(GUEST_MIN, Math.min(GUEST_MAX, next));
+        hidden.value = next;
+        valueEl.textContent = next;
+      });
+    });
+  }
 
   form.addEventListener('submit', async e => {
     e.preventDefault();

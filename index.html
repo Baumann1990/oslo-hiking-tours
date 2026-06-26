@@ -535,31 +535,23 @@
                 <span class="field-error" id="error-date"></span>
               </div>
               <div class="form-group">
-                <label for="hikers">Number of Guests</label>
-                <input type="number" id="hikers" name="hikers" min="1" placeholder="e.g. 2" required />
-                <span class="field-error" id="error-hikers"></span>
+                <label for="hikers">Guests</label>
+                <div class="stepper" id="guestsStepper">
+                  <button type="button" class="stepper__btn" data-step="-1" aria-label="Fewer guests">−</button>
+                  <span class="stepper__value" id="guestsValue" aria-live="polite">1</span>
+                  <button type="button" class="stepper__btn" data-step="1" aria-label="More guests">+</button>
+                  <input type="hidden" id="hikers" name="hikers" value="1" />
+                </div>
               </div>
             </div>
             <div class="form-group form-group--full">
-              <label id="level-label">Fitness Level</label>
-              <div class="form-options form-options--pills" role="radiogroup" aria-labelledby="level-label">
-                <label class="form-option form-option--pill">
-                  <input type="radio" name="level" value="Beginner — occasional walker" />
-                  <span class="form-option__title">Beginner</span>
-                </label>
-                <label class="form-option form-option--pill">
-                  <input type="radio" name="level" value="Intermediate — regular hiker" />
-                  <span class="form-option__title">Intermediate</span>
-                </label>
-                <label class="form-option form-option--pill">
-                  <input type="radio" name="level" value="Advanced — fit and experienced on mountain trails" />
-                  <span class="form-option__title">Advanced</span>
-                </label>
-              </div>
+              <label for="pickup">Hotel or area in Oslo <span class="label-hint">(for pickup)</span></label>
+              <input type="text" id="pickup" name="pickup" placeholder="e.g. Hotel Continental, Grünerløkka, Aker Brygge…" />
+              <p class="field-hint">We pick you up from hotels, Airbnbs and apartments anywhere in Oslo.</p>
             </div>
             <div class="form-group form-group--full">
               <label for="message">Anything else?</label>
-              <textarea id="message" name="message" rows="3" placeholder="Special requests, questions, preferred pickup time…"></textarea>
+              <textarea id="message" name="message" rows="3" placeholder="Special requests, questions…"></textarea>
             </div>
             <button type="submit" class="btn btn--primary btn--full">Send Enquiry</button>
             <p class="form__note">We'll reply within 24 hours.</p>
