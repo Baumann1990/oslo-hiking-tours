@@ -1801,6 +1801,115 @@ textarea { resize: vertical; }
   .related__grid { grid-template-columns: 1fr; }
 }
 
+/* ── Experiences ──────────────────────────────────────────────── */
+.tour-card__badge--overnight {
+  background: rgba(91,58,107,.9);
+  color: var(--white);
+}
+
+.experience-feature {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.experience-feature__img-wrap {
+  position: relative;
+  min-height: 360px;
+}
+
+.experience-feature__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.experience-feature__body {
+  padding: 40px 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experience-feature__title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin: 6px 0 14px;
+}
+
+.experience-feature__desc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.experience-feature__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-feature__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: .92rem;
+}
+
+.experience-feature__list li::before {
+  content: "✓";
+  color: var(--green-mid);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.experience-feature__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.experience-feature__price {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+
+.experience-feature__price em {
+  font-family: var(--font-sans);
+  font-size: .8rem;
+  font-style: normal;
+  color: var(--text-muted);
+  display: block;
+}
+
+.experience-feature__actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .experience-feature {
+    grid-template-columns: 1fr;
+  }
+  .experience-feature__img-wrap {
+    min-height: 220px;
+  }
+  .experience-feature__body {
+    padding: 28px 24px;
+  }
+}
+
 /* ── Mobile improvements ─────────────────────────────────────── */
 
 /* Sticky book CTA on tour pages */

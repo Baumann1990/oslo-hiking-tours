@@ -95,6 +95,17 @@
         "offers": { "@type": "Offer", "price": "18000", "priceCurrency": "NOK", "availability": "https://schema.org/InStock" }
       },
       {
+        "@type": "TouristTrip",
+        "name": "Overnight in Nordmarka",
+        "url": "https://www.oslohikingtours.no/overnight-nordmarka",
+        "description": "A private guided overnight camping experience in Nordmarka, just outside Oslo. Hike to a secluded forest spot, fire-cooked dinner at sunset, sleep in a tent under the stars, forest sunrise. All equipment provided. NOK 12 000 per group of up to 4.",
+        "touristType": "Hikers",
+        "availableLanguage": "English",
+        "duration": "PT18H",
+        "provider": { "@id": "https://www.oslohikingtours.no" },
+        "offers": { "@type": "Offer", "price": "12000", "priceCurrency": "NOK", "availability": "https://schema.org/InStock" }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -175,6 +186,7 @@
     </a>
     <nav class="nav__menu" id="navMenu">
       <a href="#tours">Tours</a>
+      <a href="#experiences">Experiences</a>
       <a href="#about">About</a>
       <a href="https://www.instagram.com/oslobiketours" target="_blank" rel="noopener" class="nav__social" aria-label="Oslo Hiking Tours on Instagram">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -401,7 +413,52 @@
     </div>
   </section>
 
-  <!-- ─── Guides ─────────────────────────────────────────────── -->
+  <!-- ─── Experiences ────────────────────────────────────────── -->
+  <section class="experiences section" id="experiences">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Experiences</span>
+        <h2 class="section-title">Something different</h2>
+        <p class="section-sub">
+          Not a day trip — a night in the forest, off the trail, with your guide.
+        </p>
+      </div>
+
+      <div class="experience-feature">
+        <div class="experience-feature__img-wrap">
+          <img src="images/nordmarka-overnight-card.jpg" alt="Tent and campfire under a starry sky in Nordmarka forest" class="experience-feature__img" loading="lazy" />
+          <span class="tour-card__badge tour-card__badge--overnight" style="position:absolute;top:14px;left:14px;">Overnight</span>
+        </div>
+        <div class="experience-feature__body">
+          <span class="tag">Nordmarka</span>
+          <h3 class="experience-feature__title">Overnight in Nordmarka</h3>
+          <p class="experience-feature__desc">
+            We hike into the forest in the late afternoon, to a quiet spot your guide
+            knows and most visitors never find. Tents go up, a fire is lit, and dinner
+            is cooked right there as the light turns gold over the trees. You sleep
+            under the stars and wake to coffee and a forest sunrise, before hiking
+            back out and returning to your hotel.
+          </p>
+          <ul class="experience-feature__list">
+            <li>Sunset and sunrise in the forest, away from the city</li>
+            <li>Dinner cooked over the fire by your guide</li>
+            <li>Tents and all camping equipment provided — nothing to bring</li>
+            <li>A secluded spot in Nordmarka, off the marked trails</li>
+            <li>Hotel pickup and drop-off included</li>
+          </ul>
+          <div class="experience-feature__footer">
+            <div class="experience-feature__price">
+              NOK 12 000 <em>per group, up to 4 guests</em>
+            </div>
+            <div class="experience-feature__actions">
+              <a href="/overnight-nordmarka" class="btn btn--outline">Learn more</a>
+              <a href="#book" class="btn btn--primary">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ─── Gallery strip ──────────────────────────────────────── -->
   <section class="gallery">
@@ -453,6 +510,7 @@
                   <option>Vettakollen Viewpoint — from NOK 4 000</option>
                   <option>Gaustatoppen — from NOK 10 000</option>
                   <option>Galdhøpiggen Summit — from NOK 18 000</option>
+                  <option>Overnight in Nordmarka — from NOK 12 000</option>
                 </select>
                 <span class="field-error" id="error-tour"></span>
               </div>
@@ -708,6 +766,11 @@
           <p class="faq__answer">It depends on your fitness, experience and how long a day you want. Vettakollen suits most walkers and takes half a day. Gaustatoppen is a full mountain day for fit walkers without needing experience. Galdhøpiggen is a serious mountain day for those with prior hiking experience. Our <a href="/best-mountains-near-oslo" style="color:var(--green-mid);text-decoration:underline">guide to mountains near Oslo</a> covers each one in detail, or just get in touch and we'll help you choose.</p>
         </details>
 
+        <details class="faq__item">
+          <summary class="faq__question">Do you offer anything besides day trips?</summary>
+          <p class="faq__answer">Yes — <a href="/overnight-nordmarka" style="color:var(--green-mid);text-decoration:underline">Overnight in Nordmarka</a> is our forest camping experience. We hike to a secluded spot in the late afternoon, cook dinner over the fire as the sun sets, sleep under the stars, and hike back out the next morning. All equipment is provided.</p>
+        </details>
+
       </div>
     </div>
   </section>
@@ -733,6 +796,7 @@
           <li><a href="#tours" data-filter="all">All Routes</a></li>
           <li><a href="#tours" data-filter="local">Local</a></li>
           <li><a href="#tours" data-filter="mountain">Mountain Day Trips</a></li>
+          <li><a href="/overnight-nordmarka">Overnight in Nordmarka</a></li>
         </ul>
       </div>
       <div class="footer__links">

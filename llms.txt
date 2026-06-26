@@ -30,6 +30,16 @@ Oslo Hiking Tours is a private guided hiking company based in Oslo, Norway. We o
 - Description: A guided day trip to Galdhøpiggen (2,469m) — the highest peak in Norway and Scandinavia. Pickup at 05:00, drive to Spiterstulen (1,100m), 8–10 hours hiking to the summit and back, return late at night. High-alpine terrain, scree and open ridgelines to the summit.
 - URL: https://www.oslohikingtours.no/galdhopiggen-summit
 
+## Experiences
+
+### Overnight in Nordmarka
+- Type: Overnight forest camping experience (not a day trip)
+- Duration: Afternoon to the following morning (roughly 18 hours)
+- Drive from Oslo: 30–45 minutes
+- Price: NOK 12,000 per group (up to 4 guests)
+- Description: A private guided overnight camping experience in Nordmarka, the forest wilderness on Oslo's doorstep. Guests hike in to a secluded spot in the late afternoon, the guide cooks dinner over an open fire at sunset, guests sleep in tents under the stars, and wake to a forest sunrise before hiking back out. All camping equipment (tents, sleeping bags, mats, cooking gear) is provided — nothing to bring.
+- URL: https://www.oslohikingtours.no/overnight-nordmarka
+
 ## Key Facts
 
 - All trips are private — no strangers, just your group and your guide
@@ -128,6 +138,12 @@ Yes. Oslo Hiking Tours offers private guided day trips to all three mountains wi
 **How long do day trips from Oslo take?**
 Vettakollen is a half-day — back before lunch. Gaustatoppen is a comfortable full day, returning by early evening. Galdhøpiggen is the longest: pickup at 05:00, return late at night — typically after midnight.
 
+**Does Oslo Hiking Tours offer anything besides day trips?**
+Yes — Overnight in Nordmarka is a private guided overnight camping experience, separate from the mountain day trips. Guests hike into the forest in the late afternoon, the guide cooks dinner over a fire at sunset, and guests sleep in tents before hiking back out the next morning. All camping equipment is provided.
+
+**Is there an overnight camping experience near Oslo?**
+Yes. Oslo Hiking Tours offers Overnight in Nordmarka, a private guided forest camping trip just 30–45 minutes from central Oslo. It includes sunset, a fire-cooked dinner, sleeping under the stars, and a forest sunrise, with all equipment provided. It costs NOK 12,000 per group of up to 4 guests.
+
 ## Guide Pages
 
 - Day trips from Oslo: https://www.oslohikingtours.no/day-trips-from-oslo
@@ -139,5 +155,6 @@ Vettakollen is a half-day — back before lunch. Gaustatoppen is a comfortable f
 - https://www.oslohikingtours.no/vettakollen-summit
 - https://www.oslohikingtours.no/gaustatoppen
 - https://www.oslohikingtours.no/galdhopiggen-summit
+- https://www.oslohikingtours.no/overnight-nordmarka
 - https://www.oslohikingtours.no/day-trips-from-oslo
 - https://www.oslohikingtours.no/best-mountains-near-oslo
