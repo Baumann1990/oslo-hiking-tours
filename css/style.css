@@ -2263,3 +2263,34 @@ textarea { resize: vertical; }
   .guide-mountain__img { height: 200px; }
   .page-hero { padding: calc(var(--nav-h) + 32px) 0 48px; }
 }
+
+/* ── Season closed (off-season notice; remove when bookings reopen) ── */
+.season-notice {
+  display: inline-block;
+  background: rgba(224,159,62,.14);
+  color: var(--amber-dark);
+  border: 1px solid rgba(224,159,62,.45);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: .82rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.season-notice--hero {
+  background: var(--amber);
+  color: var(--green-deep);
+  border: none;
+  margin: 0 0 24px;
+}
+
+.season-notice--dark {
+  display: block;
+  background: rgba(224,159,62,.16);
+  color: var(--amber);
+  border-color: rgba(224,159,62,.4);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.difficulty--closed { background: var(--amber); color: var(--green-deep); }
