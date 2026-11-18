@@ -737,10 +737,14 @@ svg.icon {
   animation: aboutSlide 16s infinite;
 }
 
-.about__slideshow img:nth-child(1) { animation-delay: 0s; }
-.about__slideshow img:nth-child(2) { animation-delay: 4s; }
-.about__slideshow img:nth-child(3) { animation-delay: 8s; }
-.about__slideshow img:nth-child(4) { animation-delay: 12s; }
+.about__slideshow > img:nth-child(1),
+.about__slideshow > picture:nth-child(1) img { animation-delay: 0s; }
+.about__slideshow > img:nth-child(2),
+.about__slideshow > picture:nth-child(2) img { animation-delay: 4s; }
+.about__slideshow > img:nth-child(3),
+.about__slideshow > picture:nth-child(3) img { animation-delay: 8s; }
+.about__slideshow > img:nth-child(4),
+.about__slideshow > picture:nth-child(4) img { animation-delay: 12s; }
 
 @keyframes aboutSlide {
   0%,  4%  { opacity: 0; }
@@ -2341,3 +2345,6 @@ textarea { resize: vertical; }
 .conditions h3 { margin-top: 0; }
 .conditions p { margin: 0 0 8px; }
 .conditions p:last-child { margin-bottom: 0; }
+
+/* <picture> wrappers (responsive WebP images) must not affect layout */
+picture { display: contents; }
