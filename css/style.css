@@ -2309,3 +2309,35 @@ textarea { resize: vertical; }
 .jobs__note { text-align: center; color: var(--text-muted); font-size: .9rem; margin: 32px auto 0; max-width: 620px; }
 .jobs__note a { color: var(--green-mid); }
 @media (max-width: 768px) { .jobs__grid { grid-template-columns: 1fr; } .job-card { padding: 24px; } }
+
+/* ── Winter tours ────────────────────────────────────────────── */
+.tour-card__badge--winter {
+  background: rgba(225,236,244,.92);
+  color: #1d3a4f;
+}
+.difficulty--winter { background: #e1ecf4; color: #1d3a4f; }
+
+/* Placeholder until real photos are added — replace with <img> tags */
+.photo-pending {
+  background: linear-gradient(160deg, #3d5a6c 0%, #1f3a4a 45%, #13261d 100%);
+}
+.tour-hero.photo-pending { height: 55vh; }
+.tour-card__img-wrap.photo-pending,
+.related__card .photo-pending { height: 200px; }
+.related__card .photo-pending { height: 180px; }
+
+.winter { background: #eef3f6; }
+.winter .tours__grid { grid-template-columns: repeat(2, 1fr); max-width: 880px; margin: 0 auto; }
+.winter__note { text-align: center; color: var(--text-muted); font-size: .9rem; max-width: 640px; margin: 28px auto 0; }
+@media (max-width: 768px) { .winter .tours__grid { grid-template-columns: 1fr; } }
+
+.conditions {
+  background: #eef3f6;
+  border-left: 4px solid #3d5a6c;
+  border-radius: var(--radius-sm);
+  padding: 18px 22px;
+  margin: 24px 0;
+}
+.conditions h3 { margin-top: 0; }
+.conditions p { margin: 0 0 8px; }
+.conditions p:last-child { margin-bottom: 0; }
