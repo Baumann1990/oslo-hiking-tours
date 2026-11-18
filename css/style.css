@@ -2363,3 +2363,9 @@ picture { display: contents; }
   .footer__sister img { height: 96px; }
   .footer__sister-desc { max-width: 240px; }
 }
+
+/* Bike rental link under the Oslo Bike Tours logo */
+.footer__sister-text { display: flex; flex-direction: column; gap: 6px; }
+.footer__sister-rental { font-size: .85rem; font-weight: 500; color: var(--amber); text-decoration: none; }
+.footer__sister-rental:hover { text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 600px) { .footer__sister-text { align-items: center; } }
