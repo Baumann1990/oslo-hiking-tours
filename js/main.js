@@ -60,16 +60,17 @@
 
 /* ── Gallery rotation ────────────────────────────────────────── */
 const GALLERY_POOL = [
-  { src: 'images/vettakollen-2.jpg',                                      alt: 'Forest and Oslo fjord from Vettakollen' },
-  { src: 'images/att.qFJQAG6d-IAeeQ26VpCRwtgixvl1ShcwNAMO85fkQ4s.jpg',  alt: 'Epic snowy ridge panorama' },
-  { src: 'images/att.RyVcVYwgc_XTEa6oTFyh6-cKfHcn5_yVhnqI4nYXCAo.jpg', alt: 'Oslo riverside path at sunset' },
-  { src: 'images/att.VkJlLNhZz7SufAdCjAcgNlpmS1eiBuOwBusHCYg0z-c.jpg',  alt: 'Hidden corner of Oslo' },
-  { src: 'images/att.2L8CWJ3i42Wne6g8xmRaVZK7IDW14-LW4cHr4tOMkus.jpg',  alt: 'Winter mountain energy' },
-  { src: 'images/att.Di9GCEUXRVOlNGZ3F0LnlzCeOEzdXcGvvZOSs1tjvIk.jpg', alt: 'Kolsåstoppen ridge views' },
-  { src: 'images/att.vlftsNroPZAbrtWtv9k8rWkvi4I-2ELhIYu0uqt5ALg.jpg',  alt: 'Rocky trail with fjord in the distance' },
-  { src: 'images/att.N7lGxR01jlJa7HC9O3aMouOVh0UFvJMW9poCr6faO80.jpg',  alt: 'Nordmarka forest lake' },
-  { src: 'images/vettakollen-3.jpg',                                      alt: 'Hikers at Vettakollen summit' },
-  { src: 'images/vettakollen-4.jpg',                                      alt: 'Holmenkollen view from Vettakollen' },
+  { src: 'images/winter-forest-hike-card.jpg',    alt: 'Sunlit snow and spruce forest in winter' },
+  { src: 'images/winter-forest-hike-1.jpg',       alt: 'Hikers on snowshoes on a snowy forest trail' },
+  { src: 'images/winter-forest-hike-2.jpg',       alt: 'Winter view over Oslo and the Oslofjord from Holmenkollen' },
+  { src: 'images/winter-forest-hike-3.jpg',       alt: 'Frozen lake surrounded by snowy forest' },
+  { src: 'images/campfire-evening-walk-card.jpg', alt: 'Campfire in the snow at dusk' },
+  { src: 'images/campfire-evening-walk-1.jpg',    alt: 'Headlamp on a snowy forest trail at night' },
+  { src: 'images/campfire-evening-walk-2.jpg',    alt: 'Campfire burning in the snow' },
+  { src: 'images/campfire-evening-walk-3.jpg',    alt: 'Oslo city lights at night' },
+  { src: 'images/winter-gallery-1.jpg',           alt: 'Snow on spruce branches in low winter sun' },
+  { src: 'images/winter-gallery-2.jpg',           alt: 'Snowy forest path in winter' },
+  { src: 'images/winter-gallery-3.jpg',           alt: 'Winter sunset over the Oslofjord' },
 ];
 
 const GALLERY_COUNT = 8;
