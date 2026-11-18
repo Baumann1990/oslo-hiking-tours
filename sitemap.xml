@@ -37,10 +37,34 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.oslohikingtours.no/journal</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.oslohikingtours.no/things-to-do-in-oslo-in-winter</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.oslohikingtours.no/northern-lights-oslo</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.oslohikingtours.no/what-to-wear-winter-hike-oslo</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.oslohikingtours.no/nordmarka-oslo-forest-guide</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.oslohikingtours.no/day-trips-from-oslo</loc>
