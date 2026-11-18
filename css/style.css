@@ -2364,8 +2364,12 @@ picture { display: contents; }
   .footer__sister-desc { max-width: 240px; }
 }
 
-/* Bike rental link under the Oslo Bike Tours logo */
-.footer__sister-text { display: flex; flex-direction: column; gap: 6px; }
-.footer__sister-rental { font-size: .85rem; font-weight: 500; color: var(--amber); text-decoration: none; }
-.footer__sister-rental:hover { text-decoration: underline; text-underline-offset: 2px; }
-@media (max-width: 600px) { .footer__sister-text { align-items: center; } }
+/* Marka Bikes wordmark (bike rental) in the footer strip */
+.footer__sister a.footer__marka { text-decoration: none; opacity: .8; transition: opacity .2s; }
+.footer__sister a.footer__marka:hover { opacity: 1; }
+.marka-wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; color: var(--bg); min-width: 120px; }
+.marka-wordmark__name { font-family: var(--font-serif); font-weight: 700; font-size: 2.2rem; line-height: 1; }
+.marka-wordmark__path { width: 100%; height: 10px; display: block; }
+.marka-wordmark__bikes { font-family: var(--font-sans); font-size: .7rem; font-weight: 600; letter-spacing: .4em; text-transform: uppercase; padding-top: 3px; }
+.marka-wordmark__by { font-family: var(--font-sans); font-size: .62rem; font-weight: 400; color: #c9d3c6; padding-top: 4px; white-space: nowrap; }
+@media (max-width: 600px) { .footer__sister a.footer__marka { margin-top: 8px; } }
