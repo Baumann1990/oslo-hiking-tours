@@ -6,7 +6,11 @@
 
   function update() {
     const heroBottom = hero.getBoundingClientRect().bottom;
-    const visible    = heroBottom <= 0;
+    const book       = document.getElementById('book');
+    const bookRect   = book ? book.getBoundingClientRect() : null;
+    const bookOnScreen = bookRect && bookRect.top < window.innerHeight && bookRect.bottom > 0;
+    // Show once the hero has scrolled off screen, but not while the form itself is visible
+    const visible    = heroBottom <= 0 && !bookOnScreen;
     // Show once the hero has fully scrolled off screen
     cta.style.display = visible ? '' : 'none';
     document.body.classList.toggle('home-sticky-active', visible);

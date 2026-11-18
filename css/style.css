@@ -2064,7 +2064,9 @@ textarea { resize: vertical; }
 /* Related tours — horizontal scroll on mobile */
 @media (max-width: 700px) {
   .related__grid {
-    grid-template-columns: repeat(3, 76vw);
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 76vw;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -2348,3 +2350,9 @@ textarea { resize: vertical; }
 
 /* <picture> wrappers (responsive WebP images) must not affect layout */
 picture { display: contents; }
+
+/* Mobile audit fixes */
+@media (max-width: 480px) {
+  .stats { gap: 20px; }
+  .stat__num { font-size: 1.75rem; white-space: nowrap; }
+}
