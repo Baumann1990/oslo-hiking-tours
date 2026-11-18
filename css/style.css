@@ -1384,57 +1384,42 @@ textarea { resize: vertical; }
 
 .footer__sister {
   border-top: 1px solid rgba(255,255,255,.08);
-  padding: 28px 24px 32px;
+  padding: 28px 24px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 18px;
+  justify-content: center;
+  gap: 40px;
 }
 .footer__sister-label {
   font-size: .72rem;
   font-weight: 500;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.35);
+  color: rgba(255,255,255,.4);
   margin: 0;
 }
-.footer__sister-brands {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
+.footer__sister-brands { display: flex; align-items: center; gap: 32px; }
 .footer__sister-brand {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  height: 64px;
   text-decoration: none;
-  opacity: .8;
+  opacity: .75;
   transition: opacity .2s;
 }
 .footer__sister-brand:hover { opacity: 1; }
-.footer__sister-brand img { height: 84px; width: auto; display: block; }
-.footer__sister-caption {
-  font-size: .75rem;
-  color: rgba(255,255,255,.5);
-  letter-spacing: .02em;
-}
-.footer__sister-divider { width: 1px; height: 72px; background: rgba(255,255,255,.12); }
+.footer__sister-brand img { height: 64px; width: auto; display: block; }
+.footer__sister-divider { width: 1px; height: 44px; background: rgba(255,255,255,.15); }
 
 /* Marka Bikes wordmark (bike rental), sized to match the Oslo Bike Tours logo */
-.marka-wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; color: var(--bg); min-width: 120px; height: 84px; justify-content: center; }
-.marka-wordmark__name { font-family: var(--font-serif); font-weight: 700; font-size: 2.2rem; line-height: 1; }
-.marka-wordmark__path { width: 100%; height: 10px; display: block; }
-.marka-wordmark__bikes { font-family: var(--font-sans); font-size: .7rem; font-weight: 600; letter-spacing: .4em; text-transform: uppercase; padding-top: 3px; }
-.marka-wordmark__by { font-family: var(--font-sans); font-size: .62rem; font-weight: 400; color: #c9d3c6; padding-top: 4px; white-space: nowrap; }
+.marka-wordmark { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 1px; color: #fff; min-width: 120px; }
+.marka-wordmark__name { font-family: var(--font-serif); font-weight: 700; font-size: 1.7rem; line-height: 1; }
+.marka-wordmark__path { width: 100%; height: 8px; display: block; }
+.marka-wordmark__bikes { font-family: var(--font-sans); font-size: .62rem; font-weight: 600; letter-spacing: .4em; text-transform: uppercase; padding-top: 2px; }
+.marka-wordmark__by { font-family: var(--font-sans); font-size: .58rem; font-weight: 400; color: rgba(255,255,255,.7); padding-top: 2px; white-space: nowrap; }
 
-@media (max-width: 480px) {
-  .footer__sister-brands { gap: 24px; }
-  .footer__sister-brand img { height: 76px; }
-  .marka-wordmark { height: 76px; }
-  .marka-wordmark__name { font-size: 2rem; }
-  .footer__sister-divider { height: 64px; }
+@media (max-width: 600px) {
+  .footer__sister { flex-direction: column; gap: 16px; }
 }
 
 .footer__bottom {
