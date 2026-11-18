@@ -282,6 +282,16 @@ if (form) {
     radio.addEventListener('change', () => clearFieldError('tour'));
   });
 
+  // "Ask us" links preselect the custom-request option in the booking form
+  document.querySelectorAll('[data-select-tour="custom"]').forEach(link => {
+    link.addEventListener('click', () => {
+      const custom = form.querySelector('input[name="tour"][value^="Something else"]');
+      if (custom) { custom.checked = true; clearFieldError('tour'); }
+      const msg = document.getElementById('message');
+      if (msg) msg.placeholder = 'What would you like to do? Time of day, group size, occasion…';
+    });
+  });
+
   // Guests stepper (+/- around a hidden input, min 1, max 12)
   const guestsStepper = document.getElementById('guestsStepper');
   if (guestsStepper) {

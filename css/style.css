@@ -2366,3 +2366,35 @@ picture { display: contents; }
   .stat__num { font-size: 1.75rem; white-space: nowrap; }
 }
 
+
+/* Custom request banner under the winter tours */
+.custom-request {
+  max-width: 880px;
+  margin: 24px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 28px;
+  background: #fff;
+  border: 1px dashed #9fb3bf;
+  border-radius: var(--radius-sm);
+}
+.custom-request__title { font-family: var(--font-serif); font-size: 1.2rem; margin: 0 0 4px; color: var(--green-deep); }
+.custom-request p { margin: 0; color: var(--text-muted); font-size: .92rem; line-height: 1.55; }
+.custom-request .btn { flex-shrink: 0; }
+.form-option--wide { grid-column: 1 / -1; }
+@media (max-width: 600px) {
+  .custom-request { flex-direction: column; align-items: flex-start; padding: 20px; }
+}
+
+/* Winter guide: planning tips */
+.guide-tips { padding: 56px 0 24px; border-top: 1px solid var(--border); }
+.guide-tips .section-title { margin-bottom: 28px; }
+.guide-tips__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-tips__item { background: #eef3f6; border-radius: var(--radius-sm); padding: 22px 24px; }
+.guide-tips__item h3 { margin: 0 0 8px; font-family: var(--font-serif); font-size: 1.15rem; color: var(--green-deep); }
+.guide-tips__item p { margin: 0; color: var(--text-muted); line-height: 1.6; font-size: .95rem; }
+.guide-mountain__body a { color: var(--green-mid); text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 768px) { .guide-tips__grid { grid-template-columns: 1fr; } }
+.guide-mountain > picture { display: block; }
