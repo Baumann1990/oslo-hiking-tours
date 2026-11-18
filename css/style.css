@@ -1401,8 +1401,9 @@ textarea { resize: vertical; }
 }
 .footer__sister a { display: flex; align-items: center; }
 .footer__sister img {
-  height: 36px;
+  height: 88px;
   width: auto;
+  flex-shrink: 0;
   opacity: .8;
   transition: opacity .2s;
 }
@@ -2355,4 +2356,10 @@ picture { display: contents; }
 @media (max-width: 480px) {
   .stats { gap: 20px; }
   .stat__num { font-size: 1.75rem; white-space: nowrap; }
+}
+
+@media (max-width: 600px) {
+  .footer__sister { flex-direction: column; gap: 10px; text-align: center; padding: 24px; }
+  .footer__sister img { height: 96px; }
+  .footer__sister-desc { max-width: 240px; }
 }
