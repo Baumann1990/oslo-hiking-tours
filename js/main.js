@@ -102,7 +102,8 @@ const GALLERY_COUNT = 8;
 const nav = document.getElementById('nav');
 
 const updateNav = () => {
-  nav.classList.toggle('scrolled', window.scrollY > 40);
+  // Pages without a photo hero (e.g. thank-you) keep the solid nav at all times
+  nav.classList.toggle('scrolled', nav.classList.contains('nav--solid') || window.scrollY > 40);
 };
 
 window.addEventListener('scroll', updateNav, { passive: true });
