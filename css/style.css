@@ -2363,6 +2363,8 @@ textarea { resize: vertical; }
 
 /* <picture> wrappers (responsive WebP images) must not affect layout */
 picture { display: contents; }
+/* <source> must not become a (zero-height) grid/flex item when its picture is display:contents */
+picture > source { display: none; }
 
 /* Mobile audit fixes */
 @media (max-width: 480px) {
