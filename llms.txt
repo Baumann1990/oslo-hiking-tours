@@ -24,6 +24,10 @@ Both winter tours are private (up to 4 guests), meet in central Oslo and travel 
 - Description: A guided evening walk by headlamp through Nordmarka's winter forest to a campfire lit by the guide. Starts around 16:00, after dark. Headlamps provided; ice spikes when icy.
 - URL: https://www.oslohikingtours.no/campfire-evening-walk
 
+## About
+
+Oslo Hiking Tours is a small, local company for travellers who are tired of tourist attractions and want to experience Oslo the way locals do. Values: always private tours (no strangers, so everyone can be themselves); always local, independent cafés and smaller grassroots places; locally made food and drink; non-commercial — no sales stops. Sister companies: Oslo Bike Tours (oslobiketours.no) and Senja Fjord Tours (senjafjordtours.no). More: https://www.oslohikingtours.no/about
+
 ## Walking Tours
 
 Oslo Hiking Tours runs private walking tours in Oslo — just your group and a local guide, never strangers. Overview: https://www.oslohikingtours.no/walking-tours-oslo
@@ -196,6 +200,7 @@ Yes. Oslo Hiking Tours offers Overnight in Nordmarka, a private guided forest ca
 - https://www.oslohikingtours.no/campfire-evening-walk
 - https://www.oslohikingtours.no/oslo-coffee-walk
 - https://www.oslohikingtours.no/walking-tours-oslo
+- https://www.oslohikingtours.no/about
 - https://www.oslohikingtours.no/vettakollen-summit
 - https://www.oslohikingtours.no/gaustatoppen
 - https://www.oslohikingtours.no/overnight-nordmarka
