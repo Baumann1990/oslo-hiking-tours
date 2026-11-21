@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Original Unsplash downloads (resized copies are used on the site)
+images/*-unsplash.jpg
+
+# Search Console exports and other private data
+*.csv
