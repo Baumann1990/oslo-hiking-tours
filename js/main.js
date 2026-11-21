@@ -347,3 +347,72 @@ if (form) {
     }
   });
 }
+
+/* ── Nordmarka conditions ribbon ─────────────────────────────────
+   Same forecast as the ribbon on oslobiketours.no: that site builds
+   /data/conditions.json (MET Norway, near Ullevålseter, 10:00 to sunset)
+   and /data/snow.json (NVE seNorge snow depth) every few hours, and serves
+   them with CORS open. If either is missing or stale, the ribbon falls
+   back to a plain season message. */
+(function initConditionsRibbon() {
+  if (location.pathname.startsWith('/thank-you')) return;
+
+  const DATA = 'https://www.oslobiketours.no/data/';
+  const osloDate = d => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Oslo' }).format(d); // YYYY-MM-DD
+  const today = osloDate(new Date());
+  const tomorrow = osloDate(new Date(Date.now() + 864e5));
+  const LEVEL = { good: 'Dry', showers: 'Showers', windy: 'Windy', wet: 'Rain', snow: 'Snow' };
+  const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+  const dayName = d =>
+    d.date === today ? 'today'
+    : d.date === tomorrow ? 'tomorrow'
+    : new Date(d.date + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', timeZone: 'UTC' });
+  const both = (long, short) =>
+    `<span class="ride-ribbon__long">${long}</span><span class="ride-ribbon__short">${short}</span>`;
+
+  const onHome = location.pathname === '/' || location.pathname === '/index.html';
+  // On a tour page the button books that tour; everywhere else the winter hike
+  const tour = /^\/oslo-coffee-walk/.test(location.pathname) ? ['coffee', 'Book the coffee walk']
+    : /^\/campfire-evening-walk/.test(location.pathname) ? ['campfire', 'Book the campfire walk']
+    : ['winter', 'Book a winter hike'];
+  const cta = `<a class="ride-ribbon__cta" href="${onHome ? '#book' : `/?tour=${tour[0]}#book`}">${both(tour[1], 'Book')} →</a>`;
+
+  // Shown straight away so the page doesn't jump when the forecast arrives
+  const ribbon = document.createElement('div');
+  ribbon.className = 'ride-ribbon';
+  ribbon.setAttribute('role', 'status');
+  const paint = inner => { ribbon.innerHTML = `<span class="ride-ribbon__info">${inner}</span>${cta}`; };
+  paint('<span class="ride-dot"></span><span class="ride-ribbon__text">' +
+    both('Winter in Nordmarka — private snowshoe and campfire walks above Oslo', 'Winter walks in Nordmarka') + '</span>');
+  document.body.prepend(ribbon);
+  document.documentElement.classList.add('has-ride-ribbon');
+
+  const get = (name, maxAgeH) => fetch(DATA + name, { cache: 'no-cache' })
+    .then(r => (r.ok ? r.json() : Promise.reject()))
+    .then(d => (Date.now() - new Date(d.generated).getTime() > maxAgeH * 3600e3 ? Promise.reject() : d));
+
+  // The snow model updates once a day, so a file from yesterday is still current
+  Promise.all([get('conditions.json', 18), get('snow.json', 36).catch(() => null)])
+    .then(([data, snow]) => render(data, snow))
+    .catch(() => {});
+
+  function render(data, snow) {
+    const days = (data.days || []).filter(d => LEVEL[d.level] && new Date(d.end).getTime() > Date.now());
+    if (!days.length) return;
+    const first = days[0];
+    const rain = Number(first.precip) > 0 ? `${Number(first.precip)} mm` : 'dry';
+    const deep = snow && (snow.points || []).find(p => p.id === 'deep');
+    const snowDay = deep && deep.days.find(d => d.date === first.date);  // same day as the weather shown
+    const cm = snowDay ? snowDay.depth_cm : null;
+    const shortTail = cm === null ? `sunset ${first.sunset}` : cm > 0 ? `${cm} cm snow` : 'no snow';
+    const snowDetail = cm === null ? '' : ` <span class="sep">·</span> ${cm > 0 ? cm + ' cm snow in the forest' : 'no snow in the forest'}`;
+
+    paint(`<span class="ride-dot ride-dot--${first.level === 'good' ? 'dry' : first.level}"></span>` +
+      `<span class="ride-ribbon__text">${both('Nordmarka ' + dayName(first), cap(dayName(first)))}: ` +
+      `<strong>${LEVEL[first.level]}</strong>` +
+      `<span class="ride-ribbon__short"> · ${shortTail}</span></span>` +
+      `<span class="ride-ribbon__detail"><span class="sep">·</span> ${Number(first.temp_max)}° · ${rain} · sunset ${first.sunset}${snowDetail}</span>` +
+      `<span class="ride-ribbon__detail ride-ribbon__credit"><span class="sep">·</span> MET Norway</span>`);
+    ribbon.title = 'Forecast for Nordmarka near Ullevålseter, 10:00 to sunset. Snow depth near Kikutstua. Data: MET Norway (CC BY 4.0) and NVE.';
+  }
+})();

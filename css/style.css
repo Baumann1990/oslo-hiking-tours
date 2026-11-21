@@ -2523,3 +2523,64 @@ picture > source { display: none; }
 .journal-card__tag { letter-spacing: inherit; }
 .journal-grid--related { column-gap: 40px; }
 .post-related { background: var(--bg); border-top: 1px solid var(--border); }
+
+/* ── Nordmarka conditions ribbon (added by main.js) ──────────── */
+/* Data: oslobiketours.no/data/*.json (MET Norway forecast, NVE snow depth) */
+.ride-ribbon {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 101;
+  height: calc(40px + env(safe-area-inset-top, 0px));
+  padding: env(safe-area-inset-top, 0px) 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--green-deep);
+  color: rgba(255,255,255,.92);
+  font-size: .8125rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ride-ribbon__info { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+.ride-ribbon__text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.ride-ribbon__short { display: none; }
+.ride-ribbon strong { color: var(--white); font-weight: 600; }
+.ride-ribbon .sep { opacity: .4; }
+.ride-ribbon__detail { color: rgba(255,255,255,.65); }
+.ride-ribbon__credit { font-size: .9em; opacity: .8; }
+.ride-ribbon__cta {
+  color: var(--amber);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 6px;
+  flex-shrink: 0;
+}
+.ride-ribbon__cta:hover { text-decoration: underline; text-underline-offset: 2px; }
+
+.ride-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: var(--green-light); }
+.ride-dot--dry     { background: #cfd8d2; }
+.ride-dot--showers,
+.ride-dot--windy   { background: var(--amber); }
+.ride-dot--wet     { background: #7fa7c9; }
+.ride-dot--snow    { background: #e8f1f8; box-shadow: 0 0 8px rgba(232,241,248,.7); }
+
+/* Everything moves down by the ribbon; the nav sits right under it */
+html.has-ride-ribbon { scroll-padding-top: 40px; }
+html.has-ride-ribbon body { padding-top: calc(40px + env(safe-area-inset-top, 0px)); }
+html.has-ride-ribbon .nav { top: calc(40px + env(safe-area-inset-top, 0px)); }
+html.has-ride-ribbon .tour-page__sidebar { top: calc(var(--nav-h) + 64px); }
+/* Homepage hero still fills exactly one screen */
+html.has-ride-ribbon .hero { height: calc(100vh - 40px); height: calc(100svh - 40px); }
+
+@media (max-width: 768px) {
+  .ride-ribbon { font-size: .75rem; gap: 6px; }
+  .ride-ribbon__detail,
+  .ride-ribbon__long { display: none; }
+  .ride-ribbon__short { display: inline; }
+  /* The menu is placed relative to the nav, so it only needs to hide further up */
+  html.has-ride-ribbon .nav__menu {
+    transform: translateY(calc(-100% - var(--nav-h) - 40px - env(safe-area-inset-top, 0px) - 20px));
+  }
+  html.has-ride-ribbon .nav__menu.open { transform: translateY(0); }
+}
