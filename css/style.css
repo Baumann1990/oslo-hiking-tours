@@ -2448,6 +2448,8 @@ picture > source { display: none; }
 .post li { margin-bottom: 8px; }
 .post a { color: var(--green-mid); text-decoration: underline; text-underline-offset: 2px; }
 .post .callout { margin-top: 36px; }
+.post__figure figcaption { font-size: .85rem; color: var(--text-muted); margin-top: 10px; line-height: 1.5; }
+.post .faq__list { margin-top: 8px; }
 .post-related { background: #eef3f6; }
 .journal-grid--related { max-width: 880px; margin: 0 auto; }
 .post-related__all { text-align: center; margin: 32px 0 0; }
@@ -2475,9 +2477,13 @@ picture > source { display: none; }
 
 .jgrid { display: grid; grid-template-columns: repeat(6, 1fr); column-gap: 40px; row-gap: 64px; }
 .jpost { grid-column: span 2; display: flex; flex-direction: column; }
-.jpost:nth-child(-n+2) { grid-column: span 3; }
+/* Lead row adapts to post count so the 3-up rows never leave an orphan:
+   n≡2 (mod 3) → two wide posts; n≡1 → one full-width post; n≡0 → all equal */
+.jpost:nth-child(1):nth-last-child(3n+2), .jpost:nth-child(2):nth-last-child(3n+1) { grid-column: span 3; }
+.jpost:nth-child(1):nth-last-child(3n+1) { grid-column: 1 / -1; }
 .jpost__img-wrap { display: block; overflow: hidden; border-radius: 4px; margin-bottom: 20px; aspect-ratio: 4 / 3; }
-.jpost:nth-child(-n+2) .jpost__img-wrap { aspect-ratio: 16 / 10; }
+.jpost:nth-child(1):nth-last-child(3n+2) .jpost__img-wrap, .jpost:nth-child(2):nth-last-child(3n+1) .jpost__img-wrap { aspect-ratio: 16 / 10; }
+.jpost:nth-child(1):nth-last-child(3n+1) .jpost__img-wrap { aspect-ratio: 21 / 9; }
 .jpost__img-wrap picture { display: block; height: 100%; }
 .jpost__img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
 .jpost:hover .jpost__img { transform: scale(1.04); }
@@ -2485,7 +2491,7 @@ picture > source { display: none; }
 .jpost__tag { color: var(--green-mid); font-weight: 600; }
 .jpost__tag::after { content: ""; display: inline-block; width: 16px; height: 1px; background: currentColor; opacity: .5; margin-left: 12px; vertical-align: middle; }
 .jpost__title { font-family: var(--font-serif); font-weight: 600; font-size: 1.45rem; line-height: 1.22; margin: 0 0 10px; }
-.jpost:nth-child(-n+2) .jpost__title { font-size: 1.85rem; }
+.jpost:nth-child(1):nth-last-child(3n+2) .jpost__title, .jpost:nth-child(2):nth-last-child(3n+1) .jpost__title, .jpost:nth-child(1):nth-last-child(3n+1) .jpost__title { font-size: 1.85rem; }
 .jpost__title a { color: var(--green-deep); text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .3s; }
 .jpost:hover .jpost__title a { background-size: 100% 1px; }
 .jpost__dek { margin: 0 0 12px; color: var(--text-muted); line-height: 1.6; }
@@ -2493,8 +2499,9 @@ picture > source { display: none; }
 
 @media (max-width: 900px) {
   .jgrid { grid-template-columns: repeat(2, 1fr); column-gap: 24px; row-gap: 48px; }
-  .jpost, .jpost:nth-child(-n+2) { grid-column: span 1; }
-  .jpost:nth-child(1) { grid-column: 1 / -1; }
+  .jpost, .jpost:nth-child(1):nth-last-child(3n+2), .jpost:nth-child(2):nth-last-child(3n+1), .jpost:nth-child(1):nth-last-child(3n+1) { grid-column: span 1; }
+  /* 2-up: full-width lead only when the count is odd */
+  .jpost:nth-child(1):nth-last-child(odd) { grid-column: 1 / -1; }
   .journal-list__head { grid-template-columns: 1fr; gap: 12px; }
   .journal-list__intro { justify-self: start; }
 }
@@ -2504,7 +2511,7 @@ picture > source { display: none; }
   .journal-hero__dek { font-size: 1rem; }
   .journal-list { padding-top: 56px; }
   .jgrid { grid-template-columns: 1fr; }
-  .jpost__title, .jpost:nth-child(-n+2) .jpost__title { font-size: 1.4rem; }
+  .jpost__title, .jpost:nth-child(1):nth-last-child(3n+2) .jpost__title, .jpost:nth-child(2):nth-last-child(3n+1) .jpost__title, .jpost:nth-child(1):nth-last-child(3n+1) .jpost__title { font-size: 1.4rem; }
 }
 
 /* Related cards on posts: same borderless editorial style */

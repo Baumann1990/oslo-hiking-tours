@@ -24,6 +24,13 @@ Both winter tours are private (up to 4 guests), meet in central Oslo and travel 
 - Description: A guided evening walk by headlamp through Nordmarka's winter forest to a campfire lit by the guide. Starts around 16:00, after dark. Headlamps provided; ice spikes when icy.
 - URL: https://www.oslohikingtours.no/campfire-evening-walk
 
+## Walking Tours
+
+Oslo Hiking Tours runs private walking tours in Oslo — just your group and a local guide, never strangers. Overview: https://www.oslohikingtours.no/walking-tours-oslo
+- Oslo Coffee Walk (city, year-round, about 3 hours, NOK 3,000 per group, coffee not included)
+- Campfire Evening Walk (Nordmarka forest by headlamp, December–March, about 3 hours, NOK 3,500 per group)
+- Winter Forest Hike (Nordmarka, snowshoes or ice spikes, December–March, about 4 hours, NOK 4,000 per group)
+
 ## City Tour (year-round)
 
 ### Oslo Coffee Walk
@@ -176,6 +183,7 @@ Yes. Oslo Hiking Tours offers Overnight in Nordmarka, a private guided forest ca
 - Journal (index of all guides): https://www.oslohikingtours.no/journal
 - Can you see the northern lights in Oslo?: https://www.oslohikingtours.no/northern-lights-oslo
 - What to wear for a winter hike in Oslo: https://www.oslohikingtours.no/what-to-wear-winter-hike-oslo
+- Vettakollen in winter — how to walk to Oslo's best viewpoint by metro (metro line 1 to Vettakollen station, 30–45 min uphill, ice spikes recommended): https://www.oslohikingtours.no/vettakollen-winter-hike
 - Nordmarka, Oslo's forest at the end of the metro: https://www.oslohikingtours.no/nordmarka-oslo-forest-guide
 - Things to do in Oslo in winter: https://www.oslohikingtours.no/things-to-do-in-oslo-in-winter
 - Day trips from Oslo: https://www.oslohikingtours.no/day-trips-from-oslo
@@ -187,12 +195,14 @@ Yes. Oslo Hiking Tours offers Overnight in Nordmarka, a private guided forest ca
 - https://www.oslohikingtours.no/winter-forest-hike
 - https://www.oslohikingtours.no/campfire-evening-walk
 - https://www.oslohikingtours.no/oslo-coffee-walk
+- https://www.oslohikingtours.no/walking-tours-oslo
 - https://www.oslohikingtours.no/vettakollen-summit
 - https://www.oslohikingtours.no/gaustatoppen
 - https://www.oslohikingtours.no/overnight-nordmarka
 - https://www.oslohikingtours.no/journal
 - https://www.oslohikingtours.no/northern-lights-oslo
 - https://www.oslohikingtours.no/what-to-wear-winter-hike-oslo
+- https://www.oslohikingtours.no/vettakollen-winter-hike
 - https://www.oslohikingtours.no/nordmarka-oslo-forest-guide
 - https://www.oslohikingtours.no/things-to-do-in-oslo-in-winter
 - https://www.oslohikingtours.no/day-trips-from-oslo
