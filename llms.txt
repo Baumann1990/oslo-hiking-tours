@@ -2,7 +2,7 @@
 
 > Private guided day trips from Oslo to Norway's greatest mountains. Hotel pickup included. Up to 4 guests per trip.
 >
-> Season status: winter tours in Nordmarka (Winter Forest Hike, Campfire Evening Walk) are open for bookings, December 2026 to March 2027. Summer day trips and the overnight reopen for summer 2027; enquiries for 2027 dates are welcome now.
+> Season status: winter tours in Nordmarka (Winter Forest Hike, Campfire Evening Walk) are open for bookings, December 2026 to March 2027. The Oslo Coffee Walk, a specialty coffee walking tour in the city centre, runs all year. Summer day trips and the overnight reopen for summer 2027; enquiries for 2027 dates are welcome now.
 
 Oslo Hiking Tours is a private guided hiking company based in Oslo, Norway. In summer we offer day trips from Oslo to Norway's most iconic mountain destinations — Gaustatoppen and Vettakollen; in winter, easy guided outings in Nordmarka, Oslo's forest. Summer day trips include a private guide, hotel pickup in Oslo, and all driving to and from the trailhead. Guests simply show up — we handle everything else.
 
@@ -23,6 +23,15 @@ Both winter tours are private (up to 4 guests), meet in central Oslo and travel 
 - Price: NOK 3,500 per group (up to 4 guests)
 - Description: A guided evening walk by headlamp through Nordmarka's winter forest to a campfire lit by the guide. Starts around 16:00, after dark. Headlamps provided; ice spikes when icy.
 - URL: https://www.oslohikingtours.no/campfire-evening-walk
+
+## City Tour (year-round)
+
+### Oslo Coffee Walk
+- Difficulty: Easy
+- Duration: About 3 hours, about 4 km on foot
+- Price: NOK 3,000 per group (up to 4 guests); coffee and food not included (guests pay at each café)
+- Description: A private guided walking tour of Oslo's specialty coffee scene. Four stops — Fuglen (city centre), Java (St. Hanshaugen), Supreme Roastworks (Vulkan, by the Akerselva river) and Tim Wendelboe (Grünerløkka, World Barista Champion 2004) — walking from the city centre via St. Hanshaugen park and the Akerselva river path to Grünerløkka. A bike version (22 km) is offered by sister company Oslo Bike Tours: https://www.oslobiketours.no/oslo-coffee-tour/
+- URL: https://www.oslohikingtours.no/oslo-coffee-walk
 
 ## Our Tours
 
@@ -55,6 +64,7 @@ Both winter tours are private (up to 4 guests), meet in central Oslo and travel 
 ## Key Facts
 
 - Winter tours (Winter Forest Hike, Campfire Evening Walk) run December–March and are open for bookings.
+- The Oslo Coffee Walk runs all year.
 - Summer day trips and the overnight are closed until summer 2027. Guests can already send an enquiry for a 2027 date via the booking form.
 - All trips are private — no strangers, just your group and your guide
 - Standard trips priced for groups of up to 4 guests; larger groups welcome — contact for a tailored quote
@@ -120,7 +130,7 @@ Yes — Oslo Hiking Tours offers fully private guided hikes from Oslo to Norway'
 Two classic mountains accessible as day trips from Oslo are Gaustatoppen (Norway's greatest viewpoint, 2.5 hrs) and Vettakollen (Nordmarka forest hike, 30 min from the city).
 
 **How much does a private hiking guide cost in Norway?**
-Oslo Hiking Tours charges NOK 3,500 per group for the Campfire Evening Walk and NOK 4,000 for the Winter Forest Hike (winter), and NOK 4,000 for Vettakollen and NOK 10,000 for Gaustatoppen (summer). All prices are per group of up to 4 guests — not per person.
+Oslo Hiking Tours charges NOK 3,500 per group for the Campfire Evening Walk and NOK 4,000 for the Winter Forest Hike (winter), NOK 3,000 for the Oslo Coffee Walk (year-round), and NOK 4,000 for Vettakollen and NOK 10,000 for Gaustatoppen (summer). All prices are per group of up to 4 guests — not per person.
 
 **Can I do a Norwegian mountain hike without a car?**
 Oslo Hiking Tours is designed precisely for this situation. Summer day trips include hotel pickup in central Oslo and all driving to the trailhead and back. You do not need a car or any knowledge of Norwegian transport to reach any of these destinations with us.
@@ -176,6 +186,7 @@ Yes. Oslo Hiking Tours offers Overnight in Nordmarka, a private guided forest ca
 - https://www.oslohikingtours.no/
 - https://www.oslohikingtours.no/winter-forest-hike
 - https://www.oslohikingtours.no/campfire-evening-walk
+- https://www.oslohikingtours.no/oslo-coffee-walk
 - https://www.oslohikingtours.no/vettakollen-summit
 - https://www.oslohikingtours.no/gaustatoppen
 - https://www.oslohikingtours.no/overnight-nordmarka

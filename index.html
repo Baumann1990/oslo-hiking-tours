@@ -100,14 +100,32 @@
         }
       },
       {
+        "@type": "TouristTrip",
+        "name": "Oslo Coffee Walk",
+        "url": "https://www.oslohikingtours.no/oslo-coffee-walk",
+        "description": "Private guided walking tour of Oslo's specialty coffee scene — Fuglen, Java, Supreme Roastworks and Tim Wendelboe — on foot from the city centre to Grünerløkka. About 3 hours. NOK 3 000 per group of up to 4; coffee and food not included. Year-round.",
+        "touristType": "Food and drink travellers",
+        "availableLanguage": "English",
+        "duration": "PT3H",
+        "provider": {
+          "@id": "https://www.oslohikingtours.no"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "3000",
+          "priceCurrency": "NOK",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What winter tours do you offer?",
+            "name": "What tours do you offer this winter?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Two private outings in Nordmarka, the forest on Oslo's doorstep: the Winter Forest Hike (about 4 hours, NOK 4,000 per group) and the Campfire Evening Walk (about 3 hours, NOK 3,500 per group). Both run from December to March."
+              "text": "Two private outings in Nordmarka, the forest on Oslo's doorstep: the Winter Forest Hike (about 4 hours, NOK 4,000 per group) and the Campfire Evening Walk (about 3 hours, NOK 3,500 per group), both December to March. In the city, the Oslo Coffee Walk visits four of Oslo's best specialty cafés on foot (about 3 hours, NOK 3,000 per group) and runs all year."
             }
           },
           {
@@ -173,7 +191,7 @@
         "url": "https://www.oslohikingtours.no/",
         "name": "Oslo Hiking Tours — Private Winter Hikes & Campfire Walks in Oslo's Forest",
         "datePublished": "2026-05-11",
-        "dateModified": "2026-11-18"
+        "dateModified": "2026-11-21"
       }
     ]
   }
@@ -273,7 +291,7 @@
           </ul>
           <div class="stats">
             <div class="stat">
-              <span class="stat__num">2</span>
+              <span class="stat__num">3</span>
               <span class="stat__label">Winter tours</span>
             </div>
             <div class="stat">
@@ -295,10 +313,11 @@
     <div class="container">
       <div class="section-header">
         <span class="tag">This Winter</span>
-        <h2 class="section-title">Oslo's forest in winter</h2>
+        <h2 class="section-title">Oslo this winter</h2>
         <p class="section-sub">
           Two easy, private outings into Nordmarka, the snowy forest at the end of
-          Oslo's metro line. December to March — no experience needed.
+          Oslo's metro line — and a coffee walk through the city for a warm afternoon.
+          No experience needed.
         </p>
       </div>
 
@@ -360,6 +379,34 @@
           </div>
         </article>
 
+        <article class="tour-card">
+          <div class="tour-card__img-wrap">
+            <a href="oslo-coffee-walk" aria-label="Oslo Coffee Walk — full tour page">
+              <picture><source type="image/webp" srcset="images/coffee-walk-hero-800.webp 800w, images/coffee-walk-hero.webp 1920w" sizes="(max-width: 768px) 100vw, 380px" /><img src="images/coffee-walk-hero.jpg" srcset="images/coffee-walk-hero-800.jpg 800w, images/coffee-walk-hero.jpg 1920w" sizes="(max-width: 768px) 100vw, 380px" alt="Filter coffee dripping through a pour-over brewer, with steam rising" class="tour-card__img" loading="lazy" /></picture>
+            </a>
+            <span class="tour-card__badge tour-card__badge--city">City</span>
+          </div>
+          <div class="tour-card__body">
+            <div class="tour-card__meta">
+              <span class="difficulty difficulty--easy">Easy</span>
+              <span class="tour-card__duration"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> About 3 hrs</span>
+              <span class="tour-card__dist">Year-round</span>
+            </div>
+            <h3 class="tour-card__title"><a href="oslo-coffee-walk" class="tour-card__title-link">Oslo Coffee Walk</a></h3>
+            <p class="tour-card__desc">
+              Four of the cafés that made Oslo a coffee city — Fuglen, Java, Supreme Roastworks
+              and Tim Wendelboe — on foot from the centre to Grünerløkka.
+            </p>
+            <div class="tour-card__footer">
+              <span class="tour-card__price">NOK&nbsp;3&nbsp;000 <em>/ group up to 4</em><span class="tour-card__group-note">That's NOK&nbsp;750 each for 4<br>Coffee not included — pay at each café</span></span>
+              <div class="tour-card__actions">
+                <a href="oslo-coffee-walk" class="btn btn--outline btn--sm">Details</a>
+                <a href="#book" class="btn btn--sm" data-select-tour="coffee">Book</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
       <div class="custom-request">
         <div class="custom-request__text">
@@ -368,7 +415,7 @@
         </div>
         <a href="#book" class="btn btn--outline" data-select-tour="custom">Ask us</a>
       </div>
-      <p class="winter__note">Both tours meet in central Oslo and travel to the forest by metro. Bring warm winter boots — we bring the snowshoes, spikes and headlamps.</p>
+      <p class="winter__note">The forest tours meet in central Oslo and travel to Nordmarka by metro. Bring warm winter boots — we bring the snowshoes, spikes and headlamps.</p>
     </div>
   </section>
 
@@ -385,8 +432,8 @@
           <span class="tag">Reservations</span>
           <h2 class="section-title">Book your winter tour</h2>
           <p>
-            Winter tours run from December to March. Send us your preferred
-            tour and date and we'll confirm within 24 hours.
+            The forest tours run from December to March, and the coffee walk runs
+            all year. Send us your preferred tour and date and we'll confirm within 24 hours.
           </p>
           <ul class="book__includes">
             <li>✓ Private group — up to 4 guests</li>
@@ -427,7 +474,12 @@
                   <span class="form-option__title">Campfire Evening Walk</span>
                   <span class="form-option__meta">Evening · NOK&nbsp;3&nbsp;500</span>
                 </label>
-                <label class="form-option form-option--wide">
+                <label class="form-option">
+                  <input type="radio" name="tour" value="Oslo Coffee Walk — NOK 3 000" required />
+                  <span class="form-option__title">Oslo Coffee Walk</span>
+                  <span class="form-option__meta">Daytime · NOK&nbsp;3&nbsp;000 + coffee</span>
+                </label>
+                <label class="form-option">
                   <input type="radio" name="tour" value="Something else — custom request" required />
                   <span class="form-option__title">Something else</span>
                   <span class="form-option__meta">Tell us what you have in mind below</span>
@@ -543,6 +595,7 @@
         <ul>
           <li><a href="/winter-forest-hike">Winter Forest Hike</a></li>
           <li><a href="/campfire-evening-walk">Campfire Evening Walk</a></li>
+          <li><a href="/oslo-coffee-walk">Oslo Coffee Walk</a></li>
         </ul>
       </div>
       <div class="footer__links">

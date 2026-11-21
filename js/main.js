@@ -283,15 +283,23 @@ if (form) {
     radio.addEventListener('change', () => clearFieldError('tour'));
   });
 
-  // "Ask us" links preselect the custom-request option in the booking form
-  document.querySelectorAll('[data-select-tour="custom"]').forEach(link => {
-    link.addEventListener('click', () => {
-      const custom = form.querySelector('input[name="tour"][value^="Something else"]');
-      if (custom) { custom.checked = true; clearFieldError('tour'); }
+  // Links with data-select-tour (or /?tour=… from a tour page) preselect a tour in the booking form
+  const TOUR_PREFIX = { custom: 'Something else', coffee: 'Oslo Coffee Walk', winter: 'Winter Forest Hike', campfire: 'Campfire Evening Walk' };
+  const selectTour = key => {
+    const prefix = TOUR_PREFIX[key];
+    if (!prefix) return;
+    const radio = form.querySelector(`input[name="tour"][value^="${prefix}"]`);
+    if (radio) { radio.checked = true; clearFieldError('tour'); }
+    if (key === 'custom') {
       const msg = document.getElementById('message');
       if (msg) msg.placeholder = 'What would you like to do? Time of day, group size, occasion…';
-    });
+    }
+  };
+  document.querySelectorAll('[data-select-tour]').forEach(link => {
+    link.addEventListener('click', () => selectTour(link.dataset.selectTour));
   });
+  const tourParam = new URLSearchParams(window.location.search).get('tour');
+  if (tourParam) selectTour(tourParam);
 
   // Guests stepper (+/- around a hidden input, min 1, max 12)
   const guestsStepper = document.getElementById('guestsStepper');
