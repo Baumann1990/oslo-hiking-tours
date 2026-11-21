@@ -1,0 +1,74 @@
+# Notifies Bing (and other IndexNow engines: Yandex, Seznam, Naver) about
+# changed pages after each push to main. Google does not use IndexNow.
+#
+# - On push: submits only the pages changed in that push that are listed in sitemap.xml
+#   (so noindex drafts are never submitted).
+# - Run manually (Actions tab → IndexNow → Run workflow): submits every URL in sitemap.xml.
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths: ['**.html', 'sitemap.xml']
+  workflow_dispatch:
+
+env:
+  HOST: www.oslohikingtours.no
+  KEY: a869a6ad4615d783b33ccdc35026a530
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Work out which URLs to submit
+        id: urls
+        env:
+          BEFORE: ${{ github.event.before }}
+          EVENT: ${{ github.event_name }}
+        run: |
+          grep -o '<loc>[^<]*' sitemap.xml | sed 's/<loc>//' | sort -u > sitemap_urls.txt
+
+          if [ "$EVENT" = "workflow_dispatch" ] || ! git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            cp sitemap_urls.txt urls.txt
+          else
+            git diff --name-only --diff-filter=AM "$BEFORE" "$GITHUB_SHA" -- '*.html' \
+              | grep -v '/' \
+              | sed -e 's/\.html$//' -e 's/^index$//' \
+              | sed "s#^#https://$HOST/#" \
+              | sort -u > changed.txt
+            comm -12 changed.txt sitemap_urls.txt > urls.txt
+          fi
+
+          echo "URLs to submit:"; cat urls.txt
+          echo "count=$(wc -l < urls.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+
+      - name: Wait for GitHub Pages to publish the key file
+        if: steps.urls.outputs.count != '0'
+        run: |
+          for i in $(seq 1 30); do
+            if [ "$(curl -fsS "https://$HOST/$KEY.txt" 2>/dev/null)" = "$KEY" ]; then
+              echo "Key file is live"; sleep 60; exit 0
+            fi
+            echo "Waiting for deploy... ($i)"; sleep 20
+          done
+          echo "Key file never became reachable"; exit 1
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          jq -n --arg host "$HOST" --arg key "$KEY" \
+                --arg loc "https://$HOST/$KEY.txt" \
+                --rawfile urls urls.txt \
+                '{host: $host, key: $key, keyLocation: $loc,
+                  urlList: ($urls | split("\n") | map(select(length > 0)))}' > payload.json
+          cat payload.json
+          status=$(curl -sS -o response.txt -w '%{http_code}' \
+                     -H 'Content-Type: application/json; charset=utf-8' \
+                     --data @payload.json https://api.indexnow.org/indexnow)
+          echo "IndexNow responded HTTP $status"; cat response.txt
+          case "$status" in 200|202) ;; *) exit 1 ;; esac
